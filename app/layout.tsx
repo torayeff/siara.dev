@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Siara | AI Video Agent for Sales",
+  title: "Siara - Semantic Indexing and Retrieval Agent",
   description:
-    "Turn your passive demos into active sales agents. Siara wraps an AI Agent around your existing video assets to answer prospect questions instantly, 24/7.",
+    "Siara semantically indexes your videos for on-demand retrieval. ",
   icons: {
     icon: "/favicon.ico",
   },
