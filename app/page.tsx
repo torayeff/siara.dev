@@ -2,37 +2,56 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-black flex flex-col items-center justify-center p-8 overflow-hidden">
-      <div className="relative z-10 max-w-4xl w-full flex flex-col items-center gap-8 animate-fade-in-up">
-        {/* Logo Container */}
-        <div className="relative w-20 h-20 md:w-24 md:h-24 opacity-90 hover:opacity-100 transition-opacity duration-500">
-          <Image
-            src="/assets/images/logo-white.png"
-            alt="Siara Logo"
-            fill
-            className="object-contain"
-            priority
-          />
-        </div>
+    <main className="min-h-screen bg-[#050505] text-[#e0e0e0] font-mono selection:bg-[#e0e0e0] selection:text-black p-4 md:p-8 flex flex-col relative overflow-hidden">
+      {/* Subtle Grid Background */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#202020_1px,transparent_1px),linear-gradient(to_bottom,#202020_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
 
-        {/* Text Content */}
-        <div className="font-sans text-center selection:bg-white/20 flex flex-col items-center gap-6">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-semibold tracking-tighter">
-            <span className="bg-gradient-to-b from-white via-white/90 to-neutral-400 bg-clip-text text-transparent inline-block">
-              Siara
+      <div className="relative z-10 w-full max-w-5xl mx-auto flex-1 flex flex-col justify-between border-x border-[#202020]/50 px-4 md:px-8 bg-[#050505]/50 backdrop-blur-[1px]">
+        {/* Header / Top Bar */}
+        <header className="flex justify-between items-start pt-8 md:pt-12 border-b border-[#202020] pb-6">
+          <div className="flex items-center gap-4">
+            <div className="relative w-8 h-8">
+              <Image
+                src="/assets/images/logo-white.png"
+                alt="Siara Logo"
+                fill
+                className="object-contain opacity-80"
+              />
+            </div>
+            <span className="uppercase tracking-widest text-xs text-[#666]">
+              v0.1.0
             </span>
-          </h1>
+          </div>
+          <div className="text-xs text-[#666] flex flex-col items-end">
+            {/* Placeholder for future nav or status */}
+          </div>
+        </header>
 
-          <p className="text-xl md:text-3xl font-medium tracking-tight text-neutral-400 max-w-2xl leading-relaxed">
-            Turn your passive demos into <br className="hidden md:block" />
-            <span className="text-white">active sales agents.</span>
+        {/* Main Content */}
+        <div className="flex flex-col gap-8 py-20">
+          <h1 className="text-7xl md:text-9xl font-bold tracking-tighter uppercase leading-[0.8]">
+            Siara
+          </h1>
+          <div className="h-px w-24 bg-[#e0e0e0]" />
+          <p className="text-lg md:text-2xl max-w-2xl leading-normal text-[#a0a0a0]">
+            <span className="text-[#e0e0e0]">
+              Semantic Indexing and Retrieval Agent.
+            </span>
+            <br />
+            Transforming video into queryable knowledge graphs.
           </p>
         </div>
-      </div>
 
-      {/* Background Ambient Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.03] rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-50" />
+        {/* Footer */}
+        <footer className="border-t border-[#202020] py-8 flex justify-between items-end text-xs text-[#666] uppercase tracking-wider">
+          <div className="flex flex-col gap-2">
+            <p>Video-to-Knowledge</p>
+          </div>
+          <div className="text-right">
+            <p>© 2025 SIARA.DEV</p>
+          </div>
+        </footer>
+      </div>
     </main>
   );
 }
